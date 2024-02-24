@@ -1,11 +1,10 @@
 import csv
 import os
-import Generics.Converter
-#from Generics import Converter
+from Generics.Converter import Converter
 
 class CSV(Converter):
     def __init__(self):
-        self.super("CSV")
+        super().__init__("CSV")
         self.addConversion("JSON", lambda fileName : {
             print("stub")
         })
@@ -18,5 +17,3 @@ class CSV(Converter):
             print(header)
             for row in reader:
                 print(row)
-
-            input("\nPress Enter to return to menu...")
