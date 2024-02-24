@@ -1,12 +1,15 @@
 import os
+disableClear = True
 
 class Convertr():
     # (Stephen) Clears the console in order to keep view less cluttered
     def clear(self):
+        if disableClear:
+            return
         if os.name == "nt":  # (Stephen) Windows :(
-            _ = os.system("cls")
+            os.system("cls")
         else:  # (Stephen) Linux, MacOS or other Unix OS
-            _ = os.system("clear")
+            os.system("clear")
 
     # (Sam) Main Menu
     def main(self):
