@@ -33,5 +33,5 @@ class Convertr():
 
 # (Sam) Start the program and create the main class.
 if __name__ == "__main__":
-    Convertr = Convertr()
-    Convertr.main()
+    convertr = Convertr()
+    convertr.main()
