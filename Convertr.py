@@ -1,5 +1,5 @@
 import os
-import Conversions.CSV
+from CSVConverter import CSVConverter
 disableClear = True
 
 class Convertr():
@@ -34,6 +34,9 @@ class Convertr():
 
         print(f"Converting {self.startingType} to {self.endingType}")
 
+        # (Sam) TESTING CODE!
+        csv = CSVConverter()
+        csv.convertToJSON("Input/test.csv")
 
 # (Sam) Start the program and create the main class.
 if __name__ == "__main__":

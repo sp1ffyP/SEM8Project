@@ -12,4 +12,4 @@ class Converter():
         self.converters[fileType](fileName)
 
     def readFile(self, fileName):
-        return # (Sam) To be overridden by the converter.
+        return {} # (Sam) To be overridden by the converter.
