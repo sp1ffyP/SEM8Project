@@ -18,7 +18,7 @@ class CSVConverter(Converter):
         with open(fileName, "r", newline="", encoding="utf-8") as file:
             reader = csv.reader(file)
 
-            header = []  # Used to get the column names from the first row
+            header = []  # (Stephen) Used to get the column names from the first row
             header = next(reader)
             print(header)
             for row in reader:
