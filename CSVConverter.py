@@ -10,8 +10,6 @@ class CSVConverter(Converter):
 
     def convertToJSON(self, fileName):
         data = self.readFile(fileName)
-        print()
-        print(data)
 
     def readFile(self, fileName):
         data = {}
@@ -20,9 +18,7 @@ class CSVConverter(Converter):
 
             header = []  # (Stephen) Used to get the column names from the first row
             header = next(reader)
-            print(header)
             for row in reader:
-                print(row)
                 headerIndex = 0
                 for rowData in row:
                     data[header[headerIndex]] = rowData
