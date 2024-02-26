@@ -8,8 +8,10 @@ class CSVConverter(Converter):
         super().__init__("CSV")
         self.addConversion("JSON", self.convertToJSON)
 
-    def convertToJSON(self, fileName):
-        data = self.readFile(fileName)
+    def convertToJSON(self, inputFileName, outputFileName):
+        data = self.readFile(inputFileName)
+        with open(outputFileName, "w", newline="", encoding="utf-8") as file:
+            json.dump(data, file)
 
     def readFile(self, fileName):
         data = {}

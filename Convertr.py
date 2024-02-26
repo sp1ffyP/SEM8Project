@@ -36,7 +36,7 @@ class Convertr():
 
         # (Sam) TESTING CODE!
         csv = CSVConverter()
-        csv.convertToJSON("Input/test.csv")
+        csv.convertToJSON("Input/test.csv", "Output/test.json")
 
 # (Sam) Start the program and create the main class.
 if __name__ == "__main__":
