@@ -14,29 +14,31 @@ class Convertr():
 
     # (Sam) Main Menu
     def main(self):
-        print("What are you starting off with?")
-        print("1. JSON")
-        print("2. CSV")
-        print()
-        self.startingType = input("Enter: ")
-        self.clear()
+        # print("What are you starting off with?")
+        # print("1. JSON")
+        # print("2. CSV")
+        # print()
+        # self.startingType = input("Enter: ")
+        # self.clear()
+        #
+        # print("What would you like to convert to?")
+        # print("1. JSON")
+        # print("2. CSV")
+        # print()
+        # self.endingType = input("Enter: ")
+        # self.clear()
 
-        print("What would you like to convert to?")
-        print("1. JSON")
-        print("2. CSV")
-        print()
-        self.endingType = input("Enter: ")
-        self.clear()
-
-        print(f"Make sure all the {self.startingType} files you want to convert are in the \"Input\" folder and press ENTER when ready.")
+        print(f"Make sure all the files you want to convert are in the \"Input\" folder and press ENTER when ready.")
         self.fileLocation = input("")
         self.clear()
 
-        print(f"Converting {self.startingType} to {self.endingType}")
+        # print(f"Converting {self.startingType} to {self.endingType}")
 
         # (Sam) TESTING CODE!
         csv = CSVConverter()
-        csv.convertToJSON("Input/test.csv", "Output/test.json")
+        arr = os.listdir('./Input')
+        for file in arr:
+            csv.convertToJSON("Input/" + file, "Output/" + file)
 
 # (Sam) Start the program and create the main class.
 if __name__ == "__main__":
